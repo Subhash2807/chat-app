@@ -14,6 +14,7 @@ const locationTemplate = document.querySelector('#location-template').innerHTML
 
 //Options
 const {username,room} = Qs.parse(location.search,{ignoreQueryPrefix:true})
+console.log(username,room)
 
 const autoscroll = ()=>{
     //new message element
