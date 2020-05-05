@@ -1,4 +1,9 @@
 /* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: #fff;
     font-family: arial;
@@ -74,6 +79,11 @@ button{
 }
 }
 
+.joinname{
+    text-align: center;
+    bottom: 0;
+}
+
 
 /* Chat Page Layout */
 
@@ -105,18 +115,23 @@ button{
 
 .chat__main .icon{
     display: none;
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-top: 8px;
+    margin-left: 8px;
     width: 15px;
     height: 15px;
+    color: #39BC96;
 
+}
+
+.header{
+    background: #eeeeee;
 }
 
 .header h2{
     display: none;
     color: #39BC96;
-    padding-left: 75px;
-    margin: 0;
+    padding-left: 85px;
+    margin-top: 8;
 }
 
 .chat__messages {
@@ -146,7 +161,7 @@ button{
     color: #0070CC;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .chat .chat__sidebar {
         display: none;
         
@@ -157,19 +172,18 @@ button{
     .chat .chat__main{
         width: 100vw;
         height: 100vh;
-        overflow: hidden;
     }
     .chat__main .header h2{
         display: inline-block;
     }
     .chat{
-        overflow: hidden;
+        overflow-x: scroll;
     }
 
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
    .chat__sidebar.responsive{
        position: relative;
        display: unset;
@@ -211,7 +225,7 @@ button{
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .compose input,.compose button{
         font-size: 15px;
     } 
@@ -223,7 +237,7 @@ button{
 /* Chat Sidebar Styles */
 
 .chatlogs{
-    padding: 24px 24px 0 24px;
+    padding: 5px 24px 0 24px;
     color: #39BC96;
     margin: 0;
     background: #2c2f3a;
@@ -264,7 +278,7 @@ button{
 
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
    .chatlogs{
        display: none;
    } 
