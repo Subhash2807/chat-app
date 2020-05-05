@@ -7,7 +7,6 @@
 body {
     background: #fff;
     font-family: arial;
-    overflow: hidden;
 }
 button{
     background: #45aba6; 
@@ -119,17 +118,17 @@ button{
     margin-left: 8px;
     width: 15px;
     height: 15px;
-    color: #39BC96;
+    color: #45aba6;
 
 }
 
 .header{
-    background: #eeeeee;
+    background: #e8f7f7ec;
 }
 
 .header h2{
     display: none;
-    color: #39BC96;
+    color: #45aba6;
     padding-left: 85px;
     margin-top: 8;
 }
@@ -219,26 +218,11 @@ button{
     outline: none;
 }
 
-.compose button {
-    font-size: 20px;
-    outline: none;
-}
-
-
-@media screen and (max-width: 600px) {
-    .compose input,.compose button{
-        font-size: 15px;
-    } 
-    
-}
-
-
-
 /* Chat Sidebar Styles */
 
 .chatlogs{
     padding: 5px 24px 0 24px;
-    color: #39BC96;
+    color: #45aba6;
     margin: 0;
     background: #2c2f3a;
 }
@@ -272,7 +256,7 @@ button{
     position: fixed;
 }
 .tag a{
-    color: #39BC96;
+    color: #45aba6;
     text-decoration: none;
 }
 
