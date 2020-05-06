@@ -29,7 +29,6 @@ button{
 .login-form {
     background: #fff;
     width: 450px;
-    border-radius: 8%;
     margin: 0 auto;
     display: table;
     padding: 15px 30px 30px;
@@ -91,7 +90,6 @@ button{
     padding: 0;
     margin: 0;
     grid-template-columns: 200px auto;
-    
 }
 
 .chat__sidebar {
@@ -107,34 +105,36 @@ button{
 /* Chat styles */
 
 .chat__main {
-    display: flex;
-    flex-direction: column;
-    max-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 100px;
+    height: 100vh;
 }
 
-.chat__main .icon{
+.header .icon {
     display: none;
-    margin-top: 8px;
-    margin-left: 8px;
-    width: 15px;
-    height: 15px;
-    color: #45aba6;
-
+    font-size: 30px;
+    color: #fff;
+    padding: 8px;
+    left: 0;
+    position: absolute;
 }
 
 .header{
-    background: #e8f7f7ec;
+    text-align: center;
+    display: none;
+    background: #45aba6;
+    padding: 0;
 }
 
 .header h2{
+    padding: 8px;
+    font-size: 30px;
     display: none;
-    color: #45aba6;
-    padding-left: 85px;
-    margin-top: 8;
+    color: #fff;
+    font-weight: 200;
 }
 
 .chat__messages {
-    flex-grow: 1;
     padding: 24px 24px 0px 24px;
     overflow-y: scroll;
 }
@@ -161,9 +161,15 @@ button{
 }
 
 @media screen and (max-width: 600px) {
+    .header{
+        display: unset;
+    }
     .chat .chat__sidebar {
         display: none;
         
+    }
+    .chat__main {
+        grid-template-rows: 50px auto 100px;
     }
     .chat__main .icon{
         display: inline-block;
@@ -175,9 +181,7 @@ button{
     .chat__main .header h2{
         display: inline-block;
     }
-    .chat{
-        overflow-x: scroll;
-    }
+   
 
 }
 
@@ -188,6 +192,9 @@ button{
        display: unset;
 
    }
+   .chat{
+       overflow: hidden;
+   }
 
 }
 
@@ -197,22 +204,28 @@ button{
 .compose {
     display: flex;
     flex-shrink: 0;
-    margin-top: 16px;
-    padding: 24px;
-    bottom: 0;
+    padding: 20px;
+}
+
+.compose button{
+    outline: none;
+    font-size: 20px;
+    width: 50px;
+    display: block;
+    border-radius: 50%;
 }
 
 .compose form {
     display: flex;
     flex-grow: 1;
-    margin-right: 16px;
+    margin-right: 10px;
 }
 
 .compose input {
-    border: 1px solid #eeeeee;
+    border: 2px solid #9ca5a5d0;
     width: 100%;
     padding: 12px;
-    margin: 0 16px 0 0;
+    margin: 0 10px 0 0;
     flex-grow: 1;
     font-size: 20px;
     outline: none;
@@ -231,9 +244,10 @@ button{
 .room-title {
     margin: 0;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
     background: #2c2f3a;
-    padding: 24px;   
+    padding: 15px 0 5px 24px ; 
+    word-wrap: break-word; 
 }
 
 .list-title {
@@ -246,17 +260,19 @@ button{
 .users {
     list-style-type: none;
     font-weight: 300;
-    padding: 12px 24px 0 24px;
+    padding: 12px 24px 10px 24px;
+    
 }
 
 .tag{
+    word-wrap: break-word;
     font-size: 10px;
-    padding: 12px 0 0 0px;
+    padding: 10px 0 10px 0;
     bottom: 0;
-    position: fixed;
+    position: absolute;
 }
 .tag a{
-    color: #45aba6;
+    color: #ecf0f0;
     text-decoration: none;
 }
 
@@ -266,4 +282,7 @@ button{
    .chatlogs{
        display: none;
    } 
+   .room-title{
+        padding: 50px 24px 0 24px;
+   }
 }
